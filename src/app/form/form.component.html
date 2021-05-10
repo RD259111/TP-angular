@@ -1,0 +1,13 @@
+<h1>Veuillez saisir les informations suivantes</h1>
+
+
+Nom <input type="text" [(ngModel)]="lastName" />
+Prénom <input type="text" [(ngModel)]="name" />
+Age <input type="text" [(ngModel)]="age" />
+Sexe
+<input type="radio" name="sexe" id="homme" value="homme" [(ngModel)]="sexe" checked/> <label for="homme">Homme</label>
+<input type="radio" name="sexe" id="femme" value="femme" [(ngModel)]="sexe"/> <label for="femme">Femme</label>
+
+<input type="submit" (click)="change()"/>
+
+<app-message [age]="age" [name]="name" [lastName]="lastName" [sexe]="sexe" [majority]="majority" [displayed]="displayed"></app-message>
